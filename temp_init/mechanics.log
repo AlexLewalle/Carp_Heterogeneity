@@ -1,0 +1,148 @@
+-------------------------
+
+Material information
+
+- Material region 0
+   Type:       GuccioneMaterial
+   Parameters: 
+    - volumetric:  kappa=1000
+    - scaling:     a=1
+    - directional: b_f=18.48; b_t=3.58
+    - interaction: b_fs=1.627
+    - active stress type: Sqrt scaled
+                 scaling: fiber=1; sheet=0; normal=0
+- Total Lagrange formulation
+- Dead loads (symmetric system) 
+
+--------------------------
+
+Set mechanical boundary conditions
+ - Setup mechanical solvers
+
+Initialize FE Matrix for mechanics
+
+Initial mechanics setup time: 0.0
+
+===============================================================================
+ Time step 0 (0.000 ms) - entering mechanics_step
+===============================================================================
+Output mechanic step:
+ - write mechanic output vector data
+Solve:
+ - Entering Newton loop, compute solution for next time/load step
+
++----+-----------+-----------+-----------+-----------+-----------+-----+-----------+----+
+| NS |   INF*    |  ABSRES*  |  RELRES   |   CFUP    |  CFRES*   | IT  |    ETA    | LS |
++----+-----------+-----------+-----------+-----------+-----------+-----+-----------+----+
+|  1 | 1.207e-12 | 6.643e-16 | 1.000e+00 | 1.000e+00 | 1.000e+00 |  11 | 1.204e+05 |  0 |
++----+-----------+-----------+-----------+-----------+-----------+-----+-----------+----+
+ - Newton solver converged in 0.517 sec!
+
+Nonlinear mechanics solved in 0.517 seconds.
+
+===============================================================================
+ Time step 1000 (1.000 ms) - entering mechanics_step
+===============================================================================
+Output mechanic step:
+ - write mechanic output vector data
+Solve:
+ - Entering Newton loop, compute solution for next time/load step
+
++----+-----------+-----------+-----------+-----------+-----------+-----+-----------+----+
+| NS |   INF*    |  ABSRES*  |  RELRES   |   CFUP    |  CFRES*   | IT  |    ETA    | LS |
++----+-----------+-----------+-----------+-----------+-----------+-----+-----------+----+
+|  1 | 3.853e-10 | 1.469e-13 | 1.000e+00 | 1.000e+00 | 1.000e+00 |  12 | 5.444e+02 |  0 |
++----+-----------+-----------+-----------+-----------+-----------+-----+-----------+----+
+ - Newton solver converged in 0.652 sec!
+
+Nonlinear mechanics solved in 0.652 seconds.
+
+===============================================================================
+ Time step 2000 (2.000 ms) - entering mechanics_step
+===============================================================================
+Output mechanic step:
+ - write mechanic output vector data
+Solve:
+ - Entering Newton loop, compute solution for next time/load step
+
++----+-----------+-----------+-----------+-----------+-----------+-----+-----------+----+
+| NS |   INF*    |  ABSRES*  |  RELRES   |   CFUP    |  CFRES*   | IT  |    ETA    | LS |
++----+-----------+-----------+-----------+-----------+-----------+-----+-----------+----+
+|  1 | 1.187e-10 | 4.889e-14 | 1.000e+00 | 1.000e+00 | 1.000e+00 |  13 | 1.636e+03 |  0 |
++----+-----------+-----------+-----------+-----------+-----------+-----+-----------+----+
+ - Newton solver converged in 0.609 sec!
+
+Nonlinear mechanics solved in 0.609 seconds.
+
+===============================================================================
+ Time step 3000 (3.000 ms) - entering mechanics_step
+===============================================================================
+Output mechanic step:
+ - write mechanic output vector data
+Solve:
+ - Entering Newton loop, compute solution for next time/load step
+
++----+-----------+-----------+-----------+-----------+-----------+-----+-----------+----+
+| NS |   INF*    |  ABSRES*  |  RELRES   |   CFUP    |  CFRES*   | IT  |    ETA    | LS |
++----+-----------+-----------+-----------+-----------+-----------+-----+-----------+----+
+|  1 | 1.111e-10 | 4.835e-14 | 1.000e+00 | 1.000e+00 | 1.000e+00 |  12 | 1.655e+03 |  0 |
++----+-----------+-----------+-----------+-----------+-----------+-----+-----------+----+
+ - Newton solver converged in 0.567 sec!
+
+Nonlinear mechanics solved in 0.567 seconds.
+
+===============================================================================
+ Time step 4000 (4.000 ms) - entering mechanics_step
+===============================================================================
+Output mechanic step:
+ - write mechanic output vector data
+Solve:
+ - Entering Newton loop, compute solution for next time/load step
+
++----+-----------+-----------+-----------+-----------+-----------+-----+-----------+----+
+| NS |   INF*    |  ABSRES*  |  RELRES   |   CFUP    |  CFRES*   | IT  |    ETA    | LS |
++----+-----------+-----------+-----------+-----------+-----------+-----+-----------+----+
+|  1 | 1.110e-10 | 4.845e-14 | 1.000e+00 | 1.000e+00 | 1.000e+00 |  12 | 1.651e+03 |  0 |
++----+-----------+-----------+-----------+-----------+-----------+-----+-----------+----+
+ - Newton solver converged in 0.570 sec!
+
+Nonlinear mechanics solved in 0.570 seconds.
+
+===============================================================================
+ Time step 5000 (5.000 ms) - entering mechanics_step
+===============================================================================
+Output mechanic step:
+ - write mechanic output vector data
+Solve:
+ - Entering Newton loop, compute solution for next time/load step
+
++----+-----------+-----------+-----------+-----------+-----------+-----+-----------+----+
+| NS |   INF*    |  ABSRES*  |  RELRES   |   CFUP    |  CFRES*   | IT  |    ETA    | LS |
++----+-----------+-----------+-----------+-----------+-----------+-----+-----------+----+
+|  1 | 1.079e-10 | 4.771e-14 | 1.000e+00 | 1.000e+00 | 1.000e+00 |  12 | 1.677e+03 |  0 |
++----+-----------+-----------+-----------+-----------+-----------+-----+-----------+----+
+ - Newton solver converged in 0.573 sec!
+
+Nonlinear mechanics solved in 0.573 seconds.
+
+===============================================================================
+ Time step 6000 (6.000 ms) - entering mechanics_step
+===============================================================================
+Output mechanic step:
+ - write mechanic output vector data
+Solve:
+ - Entering Newton loop, compute solution for next time/load step
+
++----+-----------+-----------+-----------+-----------+-----------+-----+-----------+----+
+| NS |   INF*    |  ABSRES*  |  RELRES   |   CFUP    |  CFRES*   | IT  |    ETA    | LS |
++----+-----------+-----------+-----------+-----------+-----------+-----+-----------+----+
+|  1 | 1.030e-10 | 4.591e-14 | 1.000e+00 | 1.000e+00 | 1.000e+00 |  12 | 1.742e+03 |  0 |
++----+-----------+-----------+-----------+-----------+-----------+-----+-----------+----+
+ - Newton solver converged in 0.576 sec!
+
+Nonlinear mechanics solved in 0.576 seconds.
+
+===============================================================================
+ Time step 7000 (7.000 ms) - entering mechanics_step
+===============================================================================
+Output mechanic step:

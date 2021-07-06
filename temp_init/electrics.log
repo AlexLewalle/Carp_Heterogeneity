@@ -1,0 +1,33 @@
+
+
+Setting up ionic models and plugins
+-----------------------------------
+
+Assigning IMPS to tagged regions:
+	Ionic model: TT2_Cai to tag region(s) [1],.
+	Plug-in(s) : LandStress to tag region(s) [1],.
+
+
+Building intracellular electric stiffness matrix in standard mode.
+Building intracellular electric stiffness matrix done in 0.023 seconds.
+Building intracellular electric lumped mass matrix in standard mode.
+Building intracellular electric lumped mass matrix done in 0.001 seconds.
+
+
+Affected Stimulus Volumes
+Type           (          Name) [Stimulus  ID]: Vol um^3 ( Vol mm^3 )
+-------------- ---------------- -------------- --------- ------------
+trans I        (Stimulus_0    ) [Stimulus   0]:    4e+11 (      400 )
+prescribed Vm  (Stimulus_1    ) [Stimulus   1]:        0 (        0 )
+
+
+
+
+
+Current Injecting electrodes
+Type           (          Name) [ID]: Total [uA] Density
+-------------- ---------------- ----- ---------- --------------------
+
+
+
+Leading edge trigger event detected for stimulus Stimulus_0 at 5.000 ms.

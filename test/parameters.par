@@ -1,0 +1,242 @@
+# CARP GIT commit hash: 5e589f66
+# dependency hashes:    PT_C=31642c1e,elasticity=4eb6a1d2,eikonal=b58be0de,fluid=f6a15bc3
+
+# /home/al12/Carp_20210527/bin/carp.pt +F em_coupling_AL.par +F /home/al12/Carp_20210527/carputils/carputils/resources/options/pt_ell_amg
+# +F /home/al12/Carp_20210527/carputils/carputils/resources/options/pt_para_amg +F /home/al12/Carp_20210527/carputils/carputils/resources/options/pt_mech_amg
+# -ellip_use_pt 1 -parab_use_pt 1 -purk_use_pt 0 -mech_use_pt 1 -purk_options_file /home/al12/Carp_20210527/carputils/carputils/resources/petsc_options/petsc_purk_gmres_opts
+# -mech_finite_element 0 -mech_activate_inertia 0 -simID test -tend 700.0 -meshname meshes/2021-05-20_EhbmiCJGde/block -numtagreg
+# 1 -tagreg[0].type 4 -tagreg[0].elemfile NecroticElements_0.2 -tagreg[0].tag 666 -floating_ground 0 -diffusionOn 0 -num_stim 2 -stimulus[0].stimtype
+# 0 -stimulus[0].start 5 -stimulus[0].strength 150.0 -stimulus[0].duration 3.0 -stimulus[0].x0 -11000.0 -stimulus[0].xd 22000.0 -stimulus[0].y0
+# -31000.0 -stimulus[0].yd 62000.0 -stimulus[0].z0 -6000.0 -stimulus[0].zd 12000.0 -stimulus[1].stimtype 8 -bidomain 0 -num_mechanic_dbc
+# 2 -mechanic_dbc[0].x0 -11000.0 -mechanic_dbc[0].xd 22000.0 -mechanic_dbc[0].y0 -31000.0 -mechanic_dbc[0].yd 2000.0 -mechanic_dbc[0].z0
+# -6000.0 -mechanic_dbc[0].zd 12000.0 -mechanic_dbc[0].name apical_dbc.surf -mechanic_dbc[0].bctype 0 -mechanic_dbc[0].apply_ux 1
+# -mechanic_dbc[0].apply_uy 1 -mechanic_dbc[0].apply_uz 1 -mechanic_dbc[0].dump_nodes 1 -mechanic_dbc[1].x0 -11000.0 -mechanic_dbc[1].xd
+# 22000.0 -mechanic_dbc[1].y0 29000.0 -mechanic_dbc[1].yd 2000.0 -mechanic_dbc[1].z0 -6000.0 -mechanic_dbc[1].zd 12000.0 -mechanic_dbc[1].name
+# basal_dbc.surf -mechanic_dbc[1].bctype 0 -mechanic_dbc[1].apply_ux 0 -mechanic_dbc[1].apply_uy 1 -mechanic_dbc[1].apply_uz 0 -mechanic_dbc[1].dump_nodes
+# 1 -mechDT 1 -spacedt 1 -timedt 1 -dt 1 -num_mregions 2 -mregion[0].name wedge -mregion[0].num_IDs 1 -mregion[0].ID[0] 1 -mregion[0].params
+# a=1.0,kappa=1000.0 -mregion[0].type 9 -mregion[1].name wedge -mregion[1].num_IDs 1 -mregion[1].ID[0] 666 -mregion[1].params a=1.0,kappa=1000.0
+# -mregion[1].type 9 -num_external_imp 1 -external_imp /home/al12/Carp/MyModels/TT2_Cai.so -num_imp_regions 2 -imp_region[0].im TT2
+# -imp_region[0].num_IDs 1 -imp_region[0].ID[0] 1 -imp_region[1].im TT2 -imp_region[1].num_IDs 1 -imp_region[1].ID[0] 666 -num_gregions
+# 2 -gregion[0].num_IDs 1 -gregion[0].ID[0] 1 -gregion[1].num_IDs 1 -gregion[1].ID[0] 666 -num_ekregions 2 -ekregion[0].ID 0 -ekregion[0].vel_f
+# 0.6 -ekregion[0].vel_s 0.24 -ekregion[0].vel_n 0.24 -ekregion[1].ID 0 -ekregion[1].vel_f 0.6 -ekregion[1].vel_s 0.4 -ekregion[1].vel_n
+# 0.2 -veldep 0.0 -imp_region[0].plugins LandHumanStress -imp_region[1].plugins LandHumanStress -num_gvecs 1 -gvec[0].name Ca_i -gvec[0].ID[0]
+# Ca_i -gvec[0].bogus -10.0 -imp_region[0].plug_param Tref=40 -imp_region[1].plug_param Tref=0 -mech_use_actStress 1 -mech_lambda_upd
+# 2 -mech_deform_elec 0 -parab_solve 1 -localize_pts 1 -cg_tol_ellip 1e-08 -cg_tol_parab 1e-08 -cg_norm_ellip 0 -cg_norm_parab 0 -mapping_mode
+# 1 -mass_lumping 1 -mech_configuration 1 -mech_tangent_comp 0 -volumeTracking 1 -newton_line_search 0 -newton_maxit_mech 50 -load_stiffening
+# 1 -mapping_mode 1 -newton_tol_mech 1e-06 -mech_output 1 -gridout_i 3 -stress_value 48 
+
+#=======================================================>>
+## em_coupling_AL.par ##
+# ionic setup
+#num_imp_regions = 1
+
+#electrical setup
+#num_stim             =   1
+
+#stimulus[0].name     = "S1"
+#stimulus[0].stimtype =   0
+#stimulus[0].strength = 250.0
+#stimulus[0].duration =   2. 
+#stimulus[0].start    =   0.
+
+bidomain    =   0 
+#spacedt     =   1
+#timedt      =   1
+parab_solve =   1
+
+
+
+
+
+
+
+##END of em_coupling_AL.par
+#=======================================================<<
+
+#=======================================================>>
+## /home/al12/Carp_20210527/carputils/carputils/resources/options/pt_ell_amg ##
+pt_opts_ellip.amg_smooth_steps 1
+pt_opts_ellip.amg_max_level 12
+pt_opts_ellip.amg_min_nodes 1
+pt_opts_ellip.amg_crs_ratio 0.99
+pt_opts_ellip.amg_crs_strat 0
+pt_opts_ellip.amg_verbose 1
+pt_opts_ellip.amg_epsilon 0.01
+pt_opts_ellip.amg_block_size 1
+pt_opts_ellip.amg_omega 0.66
+pt_opts_ellip.amg_gauss_seidel 0
+pt_opts_ellip.cg_abs_err 1
+pt_opts_ellip.cg_pre_err 1
+pt_opts_ellip.cg_verbose 0
+pt_opts_ellip.cg_max_iter 100
+
+##END of /home/al12/Carp_20210527/carputils/carputils/resources/options/pt_ell_amg
+#=======================================================<<
+
+#=======================================================>>
+## /home/al12/Carp_20210527/carputils/carputils/resources/options/pt_para_amg ##
+pt_opts_parab.cg_abs_err 1
+pt_opts_parab.cg_pre_err 1
+pt_opts_parab.amg_smooth_steps 2
+pt_opts_parab.amg_gauss_seidel 0
+pt_opts_parab.cg_verbose 0
+pt_opts_parab.cg_max_iter 100
+
+##END of /home/al12/Carp_20210527/carputils/carputils/resources/options/pt_para_amg
+#=======================================================<<
+
+#=======================================================>>
+## /home/al12/Carp_20210527/carputils/carputils/resources/options/pt_mech_amg ##
+pt_opts_mech.amg_smooth_steps 1
+pt_opts_mech.amg_min_nodes 100
+pt_opts_mech.amg_max_level 12
+pt_opts_mech.amg_crs_ratio 0.99
+pt_opts_mech.amg_crs_strat 0
+pt_opts_mech.amg_omega 0.55
+pt_opts_mech.amg_gauss_seidel 1
+pt_opts_mech.amg_block_size 1
+pt_opts_mech.amg_verbose 1
+pt_opts_mech.amg_epsilon 0.01
+pt_opts_mech.cg_abs_err 1
+pt_opts_mech.cg_pre_err 0
+pt_opts_mech.cg_verbose 5
+
+##END of /home/al12/Carp_20210527/carputils/carputils/resources/options/pt_mech_amg
+#=======================================================<<
+
+ellip_use_pt                            = 1
+parab_use_pt                            = 1
+purk_use_pt                             = 0
+mech_use_pt                             = 1
+purk_options_file = /home/al12/Carp_20210527/carputils/carputils/resources/petsc_options/petsc_purk_gmres_opts
+#=======================================================>>
+## /home/al12/Carp_20210527/carputils/carputils/resources/petsc_options/petsc_purk_gmres_opts ##
+#-ksp_type gmres
+#-mat_increase_overlap_scalable
+#-pc_type asm
+#-pc_asm_overlap 1
+#-pc_asm_type restrict
+#-pc_asm_local_type additive
+#-options_left
+
+##END of /home/al12/Carp_20210527/carputils/carputils/resources/petsc_options/petsc_purk_gmres_opts
+#=======================================================<<
+
+mech_finite_element                     = 0
+mech_activate_inertia                   = 0
+simID                                   = test
+tend                                    = 700.0
+meshname                                = meshes/2021-05-20_EhbmiCJGde/block
+numtagreg                               = 1
+tagreg[0].type                          = 4
+tagreg[0].elemfile                      = NecroticElements_0.2
+tagreg[0].tag                           = 666
+floating_ground                         = 0
+diffusionOn                             = 0
+num_stim                                = 2
+stimulus[0].stimtype                    = 0
+stimulus[0].start                       = 5
+stimulus[0].strength                    = 150.0
+stimulus[0].duration                    = 3.0
+stimulus[0].x0                          = -11000.0
+stimulus[0].xd                          = 22000.0
+stimulus[0].y0                          = -31000.0
+stimulus[0].yd                          = 62000.0
+stimulus[0].z0                          = -6000.0
+stimulus[0].zd                          = 12000.0
+stimulus[1].stimtype                    = 8
+bidomain                                = 0
+num_mechanic_dbc                        = 2
+mechanic_dbc[0].x0                      = -11000.0
+mechanic_dbc[0].xd                      = 22000.0
+mechanic_dbc[0].y0                      = -31000.0
+mechanic_dbc[0].yd                      = 2000.0
+mechanic_dbc[0].z0                      = -6000.0
+mechanic_dbc[0].zd                      = 12000.0
+mechanic_dbc[0].name                    = apical_dbc.surf
+mechanic_dbc[0].bctype                  = 0
+mechanic_dbc[0].apply_ux                = 1
+mechanic_dbc[0].apply_uy                = 1
+mechanic_dbc[0].apply_uz                = 1
+mechanic_dbc[0].dump_nodes              = 1
+mechanic_dbc[1].x0                      = -11000.0
+mechanic_dbc[1].xd                      = 22000.0
+mechanic_dbc[1].y0                      = 29000.0
+mechanic_dbc[1].yd                      = 2000.0
+mechanic_dbc[1].z0                      = -6000.0
+mechanic_dbc[1].zd                      = 12000.0
+mechanic_dbc[1].name                    = basal_dbc.surf
+mechanic_dbc[1].bctype                  = 0
+mechanic_dbc[1].apply_ux                = 0
+mechanic_dbc[1].apply_uy                = 1
+mechanic_dbc[1].apply_uz                = 0
+mechanic_dbc[1].dump_nodes              = 1
+mechDT                                  = 1
+spacedt                                 = 1
+timedt                                  = 1
+dt                                      = 1
+num_mregions                            = 2
+mregion[0].name                         = wedge
+mregion[0].num_IDs                      = 1
+mregion[0].ID[0]                        = 1
+mregion[0].params                       = "a=1.0,kappa=1000.0"
+mregion[0].type                         = 9
+mregion[1].name                         = wedge
+mregion[1].num_IDs                      = 1
+mregion[1].ID[0]                        = 666
+mregion[1].params                       = "a=1.0,kappa=1000.0"
+mregion[1].type                         = 9
+num_external_imp                        = 1
+external_imp                            = /home/al12/Carp/MyModels/TT2_Cai.so
+num_imp_regions                         = 2
+imp_region[0].im                        = TT2
+imp_region[0].num_IDs                   = 1
+imp_region[0].ID[0]                     = 1
+imp_region[1].im                        = TT2
+imp_region[1].num_IDs                   = 1
+imp_region[1].ID[0]                     = 666
+num_gregions                            = 2
+gregion[0].num_IDs                      = 1
+gregion[0].ID[0]                        = 1
+gregion[1].num_IDs                      = 1
+gregion[1].ID[0]                        = 666
+num_ekregions                           = 2
+ekregion[0].ID                          = 0
+ekregion[0].vel_f                       = 0.6
+ekregion[0].vel_s                       = 0.24
+ekregion[0].vel_n                       = 0.24
+ekregion[1].ID                          = 0
+ekregion[1].vel_f                       = 0.6
+ekregion[1].vel_s                       = 0.4
+ekregion[1].vel_n                       = 0.2
+veldep                                  = 0.0
+imp_region[0].plugins                   = LandHumanStress
+imp_region[1].plugins                   = LandHumanStress
+num_gvecs                               = 1
+gvec[0].name                            = Ca_i
+gvec[0].ID[0]                           = Ca_i
+gvec[0].bogus                           = -10.0
+imp_region[0].plug_param                = "Tref=40"
+imp_region[1].plug_param                = "Tref=0"
+mech_use_actStress                      = 1
+mech_lambda_upd                         = 2
+mech_deform_elec                        = 0
+parab_solve                             = 1
+localize_pts                            = 1
+cg_tol_ellip                            = 1e-08
+cg_tol_parab                            = 1e-08
+cg_norm_ellip                           = 0
+cg_norm_parab                           = 0
+mapping_mode                            = 1
+mass_lumping                            = 1
+mech_configuration                      = 1
+mech_tangent_comp                       = 0
+volumeTracking                          = 1
+newton_line_search                      = 0
+newton_maxit_mech                       = 50
+load_stiffening                         = 1
+mapping_mode                            = 1
+newton_tol_mech                         = 1e-06
+mech_output                             = 1
+gridout_i                               = 3
+stress_value                            = 48
